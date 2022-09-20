@@ -41,15 +41,19 @@
         console.log(numberofballs.value)
         if (given.length >= 6) {
             alert('그만!!!!!!!!!!!!!!!!')
+            numberofballs.value = ''
         }
         else if (numberofballs.value < 1 || numberofballs.value > 45) {
             alert('올바른 값을 입력하세요')
+            numberofballs.value = ''
         }
         else if (given.includes(numberofballs.value)) {
             alert('이미 존재하는 번호입니다')
+            numberofballs.value = ''
         }
         else {
             given.push(numberofballs.value)
+            numberofballs.value = ''
         }
         console.log("given")
         console.log(given)
