@@ -38,11 +38,11 @@
       ballContainer.classList.add('ball-container')
       // 공을 만들어서 => input개를 만들어서
       const numberofballs = document.querySelector("#numberofballs")
-      if (numberofballs.value < 1 || numberofballs.value > 6) {
+      if (Number(numberofballs.value) < 1 || Number(numberofballs.value) > 6) {
         alert('1부터 6까지의 숫자만 입력 가능합니다.')
       }
       else {
-        const numbers = _.sampleSize(_.range(1, 46), numberofballs.value)
+        const numbers = _.sampleSize(_.range(1, 46), Number(numberofballs.value))
         numbers.sort(function (a, b) {
             return a - b
         })
